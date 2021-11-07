@@ -56,8 +56,6 @@ router.post(
       },
     });
 
-    console.log(charge);
-
     const payment = Payment.build({ orderId, stripeId: charge.id });
     await payment.save();
 
